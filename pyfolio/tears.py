@@ -1153,13 +1153,14 @@ def create_bayesian_tear_sheet(returns, benchmark_rets=None,
     axs = []
     row = 0
 
-    # Plot Bayesian cone
-    ax_cone = plt.subplot(gs[row, :])
-    bayesian.plot_bayes_cone(df_train, df_test, ppc_t, ax=ax_cone)
-    previous_time = timer("plotting Bayesian cone", previous_time)
+    # Bayesian cone is broken... we don't show it
+    ## Plot Bayesian cone
+    # ax_cone = plt.subplot(gs[row, :])
+    # bayesian.plot_bayes_cone(df_train, df_test, ppc_t, ax=ax_cone)
+    # previous_time = timer("plotting Bayesian cone", previous_time)
 
     # Plot BEST results
-    row += 1
+    # row += 1
     axs.append(plt.subplot(gs[row, 0]))
     axs.append(plt.subplot(gs[row, 1]))
     row += 1
